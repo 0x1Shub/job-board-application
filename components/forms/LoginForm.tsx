@@ -42,7 +42,12 @@ export default async function LoginForm(){
                             <GeneralSubmitButton text="Login With Github" variant={'outline'} width="w-full" icon={<Github />} />
                         </form>
 
-                        <form>
+                        <form action={async () => {
+                            "use server";
+                            await signIn("google", {
+                                redirectTo: '/',
+                            });
+                        }}>
                             {/* <Button className="w-full">
                                 <Google className="size-4" />
                                 Login with Google
