@@ -21,7 +21,7 @@ export function OnboardingForm() {
     function renderStep(){
         switch(step) {
             case 1:
-                return <UserTypeSelection />;
+                return <UserTypeSelection onSelect={handleUserTypeSelection} />;
             case 2:
                 return userType === "company" ? (<p>User is an company</p>) : (<p>User is job seeker</p>);
             default:
