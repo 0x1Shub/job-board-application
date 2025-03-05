@@ -1,3 +1,4 @@
+import { CreateJobForm } from "@/components/forms/CreateJobForm";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import ArcjetLogo from '@/public/arcjet.jpg';
 import InngestLogo from '@/public/inngest-locale.png'; 
@@ -40,11 +41,7 @@ const stats = [
 export default function PostJobPage() {
     return (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-5">
-            <Card className="col-span-1 lg:col-span-2">
-                <CardHeader>
-                    <CardTitle>Post a Job and Hire the Best Talent</CardTitle>
-                </CardHeader>
-            </Card>
+            <CreateJobForm />
 
             <div className="col-span-1">
                 <Card>
