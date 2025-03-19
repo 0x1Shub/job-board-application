@@ -11,7 +11,7 @@ const jobTypes = ["full-time", "part-time", "contract", "internship"];
 
 export function JobFilter() {
     return (
-        <Card className="col-span-1">
+        <Card className="col-span-1 h-fit shadow-md">
             <CardHeader className="flex flex-row justify-between items-center">
                 <CardTitle className="text-2xl font-semibold">
                     Filters
@@ -31,7 +31,7 @@ export function JobFilter() {
                         {jobTypes.map((job, index) => (
                             <div key={index} className="flex items-center space-x-2">
                                 <Checkbox id={job} />
-                                <Label htmlFor={job} className="text-sm font-medium">{job}</Label>
+                                <Label htmlFor={job} className="text-sm font-medium capitalize">{job}</Label>
                             </div>
                         ))}
                     </div>
